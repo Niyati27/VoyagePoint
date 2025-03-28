@@ -1,0 +1,49 @@
+﻿@* @{
+    ViewData["Title"] = "Food";
+}
+<h1>@ViewData["Title"]</h1> *@
+
+<head>
+    <title>Voyage Point</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='~/js/food.js'></script>
+
+</head>
+<body>
+
+    <br>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Food</h1>
+        <input id="pac-input" 
+            class="form-control form-control-md border shadow-sm" 
+            type="text" 
+            placeholder="Edit your destination" 
+            style="max-width: 200px;">
+    </div>
+    <div id="places" class="placesList"> <h2>List of Restaurants to Explore</h2> </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div id="map"></div>
+            </div>
+            <div class="col-sm">
+                <div id="locationSelect" class="innerPlacesList">
+
+                    <img id="placeImage" class="placeImage" src="">
+                    <div id="placeDetails" class="placeDetails">
+                        <div id="placeName" class="placeName"></div><br>
+                        <div id="placeAddress" class="placeAddress"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="scrollImages" id="imagesForPlaces">
+    </div>
+</body>
