@@ -43,9 +43,8 @@ Ensure the following are installed on your machine:
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.407-macos-x64-installer)
 - [MySQL Server](https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.0.28/xampp-osx-8.0.28-0-installer.dmg)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or VS Code with C# extension
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or VS Code (https://code.visualstudio.com/Download) with C# extension
 - Google Place API from google cloud
-
 ---
 
 ### 2. 🗂️ Setup Instructions
@@ -67,13 +66,19 @@ dotnet restore
 ```json
 private readonly string _connectionString = "Server=localhost;Database=Database_Name;User=root;Password=;";
 ```
+#### ✅ Step 4: Setup Google APi
 
-#### ✅ Step 4: Build the Project
+- Update your `wwroot/js/site.js` GOOGLE_API with your google place API:
+```json
+    script.src = "https://maps.googleapis.com/maps/api/js?key=GOOGLE_API&libraries=places&callback=initialize";
+```
+
+#### ✅ Step 5: Build the Project
 ```bash
 dotnet build
 ```
 
-#### ✅ Step 5: Run the Application
+#### ✅ Step 6: Run the Application
 ```bash
 dotnet run
 ```
